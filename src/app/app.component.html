@@ -13,6 +13,17 @@
 }
 
 <p>
+  Number of Dice:
+  <select #numberOfDice (change)="onNumberOfDiceChange(numberOfDice.value)">
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3" selected>Three</option>
+    <option value="4">Four</option>
+    <option value="5">Five</option>
+  </select>
+</p>
+
+<p>
   <button (click)="onRollDice()">Roll Dice</button>
 </p>
 <app-my-footer name="Applied Computing"></app-my-footer>
