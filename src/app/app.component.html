@@ -1,12 +1,14 @@
 <h1>Hello from the {{ title }}! </h1>
 
-@if( diceValue != undefined){
+@if( rollData != undefined){
   <p>
-    <img src="images/dice/side_{{ diceValue }}.png" alt="dice">
+    @for (diceValue of rollData.values; track $index){
+      <img src="images/dice/side_{{ diceValue }}.png" alt="dice">
+    }
   </p>
 
   <p>
-    Dice Value: {{ diceValue }}
+    Roll Total: {{ rollData.total }}
   </p>
 }
 
