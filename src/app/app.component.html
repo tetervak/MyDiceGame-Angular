@@ -14,13 +14,13 @@
 
 <p>
   Number of Dice:
-  <select #numberOfDice (change)="onNumberOfDiceChange(numberOfDice.value)">
+  <select [(ngModel)]="numberOfDice">
     <option value="1">One</option>
     <option value="2">Two</option>
-    <option value="3" selected>Three</option>
+    <option value="3">Three</option>
     <option value="4">Four</option>
     <option value="5">Five</option>
-  </select>
+  </select> &nbsp;{{ numberOfDice}}
 </p>
 
 <p>

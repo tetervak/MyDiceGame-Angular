@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import {MyFooterComponent} from './my-footer/my-footer.component';
 import {RollData} from './roll-data';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   imports: [
-    MyFooterComponent
+    MyFooterComponent,
+    FormsModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -13,7 +15,7 @@ import {RollData} from './roll-data';
 export class AppComponent {
   title:string = 'Dice Game';
   rollData: RollData | undefined;
-  numberOfDice: number = 3;
+  numberOfDice: number = 4;
 
   private getRandomDiceValue(): number {
     return Math.floor(Math.random() * 6) + 1;
