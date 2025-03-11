@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import {MyFooterComponent} from './my-footer/my-footer.component';
-import {DiceRollerComponent} from './dice-roller/dice-roller.component';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
   imports: [
     MyFooterComponent,
-    DiceRollerComponent
+    RouterOutlet
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
