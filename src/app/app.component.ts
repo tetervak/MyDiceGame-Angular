@@ -42,8 +42,4 @@ export class AppComponent {
   onRollDice(): void {
     this.rollData = this.getRollData(this.numberOfDice);
   }
-
-  onNumberOfDiceChange(value: string): void {
-    this.numberOfDice = parseInt(value);
-  }
 }
