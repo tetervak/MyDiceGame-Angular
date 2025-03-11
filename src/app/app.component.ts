@@ -20,9 +20,9 @@ export class AppComponent {
   rollData: RollData | undefined;
   numberOfDice: number = 4;
 
-  private service: DiceRollerService;
-  constructor(service: DiceRollerService) {
-    this.service = service;
+  //private service: DiceRollerService;
+  constructor(private service: DiceRollerService) {
+    //this.service = service;
   }
 
   onRollDice(): void {
