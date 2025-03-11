@@ -1,12 +1,7 @@
 <h1>Hello from the {{ title }}! </h1>
 
 @if( rollData != undefined){
-  <p>
-    @for (diceValue of rollData.values; track $index){
-      <img src="images/dice/side_{{ diceValue }}.png" alt="dice">
-    }
-  </p>
-
+  <app-dice-display [diceValues]="rollData.values"></app-dice-display>
   <p>
     Roll Total: {{ rollData.total }}
   </p>

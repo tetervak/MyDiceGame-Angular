@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import {MyFooterComponent} from './my-footer/my-footer.component';
 import {RollData} from './roll-data';
 import {FormsModule} from '@angular/forms';
+import {DiceDisplayComponent} from './dice-display/dice-display.component';
 
 @Component({
   selector: 'app-root',
   imports: [
     MyFooterComponent,
-    FormsModule
+    FormsModule,
+    DiceDisplayComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
