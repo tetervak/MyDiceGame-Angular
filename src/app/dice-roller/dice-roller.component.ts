@@ -3,12 +3,14 @@ import {RollData} from '../roll-data';
 import {DiceRollerService} from '../dice-roller.service';
 import {DiceDisplayComponent} from '../dice-display/dice-display.component';
 import {FormsModule} from '@angular/forms';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-dice-roller',
   imports: [
     DiceDisplayComponent,
-    FormsModule
+    FormsModule,
+    RouterLink
   ],
   templateUrl: './dice-roller.component.html',
   styleUrl: './dice-roller.component.css'
