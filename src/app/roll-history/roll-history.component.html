@@ -1,6 +1,31 @@
 <h2>Roll History</h2>
+
+@if(rollHistoryData.length > 0){
+  <table>
+    <tr>
+      <th>Count</th>
+      <th>Values</th>
+      <th>Total</th>
+    </tr>
+    @for (rollData of rollHistoryData; track $index) {
+      <tr>
+        <td>{{ $index + 1 }}</td>
+        <td>{{ rollData.values.join(' + ') }}</td>
+        <td>{{ rollData.total }}</td>
+      </tr>
+    }
+  </table>
+  <h3>
+    History Total: {{ historyTotal }}
+  </h3>
+} @else {
+  <p class="message">
+    No History Data
+  </p>
+}
+
 <p>
-  <button>Clear History</button>
+  <button (click)="onClearHistory()">Clear History</button>
 </p>
 <p>
   <a routerLink="dice-roller">Back to the Game</a>

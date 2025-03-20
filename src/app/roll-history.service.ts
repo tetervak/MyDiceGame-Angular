@@ -7,9 +7,15 @@ import {RollData} from './roll-data';
 export class RollHistoryService {
 
   private rollHistoryData: RollData[] = [];
+  private historyTotal: number = 0;
 
   addRollData(rollData: RollData): void {
     this.rollHistoryData.push(rollData)
+    this.historyTotal += rollData.total;
+  }
+
+  getHistoryTotal(): number {
+    return this.historyTotal;
   }
 
   getRollHistoryData(): RollData[] {
@@ -20,5 +26,6 @@ export class RollHistoryService {
 
   clear() {
     this.rollHistoryData = [];
+    this.historyTotal = 0;
   }
 }

@@ -14,13 +14,17 @@ import {RollData} from '../roll-data';
 export class RollHistoryComponent {
 
   rollHistoryData: RollData[];
+  historyTotal: number = 0;
+
 
   constructor(private service: RollHistoryService) {
     this.rollHistoryData = service.getRollHistoryData();
+    this.historyTotal = service.getHistoryTotal();
   }
 
   onClearHistory(): void {
     this.rollHistoryData = [];
+    this.historyTotal = 0;
     this.service.clear();
   }
 

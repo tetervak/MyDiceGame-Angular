@@ -1,8 +1,11 @@
+
+<h2>Roll the Dice</h2>
+
 @if( rollData != undefined){
   <app-dice-display [diceValues]="rollData.values"></app-dice-display>
-  <p>
+  <h3>
     Roll Total: {{ rollData.total }}
-  </p>
+  </h3>
 }
 
 <p>
